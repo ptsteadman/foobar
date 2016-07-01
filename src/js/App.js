@@ -2,51 +2,54 @@ import React from 'react';
 import Header from './Header';
 import ArtistList from './ArtistList';
 import SearchForm from './SearchForm';
+import Error from './Error';
 
 const css = require('!style!css!sass!../sass/styles.scss');
 
 const API_BASE = 'http://api-3283.iheart.com/api/v1/catalog/searchAll?keywords=';
 const API_PARAMS = '&queryTrack=false&queryBundle=false&queryArtist=true&' +
-  'queryStation=false&queryFeaturedStation=false&queryTalkShow=false&' +
-  'queryTalkTheme=false&queryKeyword=false&countryCode=US';
+                   'queryStation=false&queryFeaturedStation=false&queryTalkShow=false&' +
+                   'queryTalkTheme=false&queryKeyword=false&countryCode=US';
 
 const App = React.createClass({
-  getInitialState: function () {
+  getInitialState() {
     return {
       searchTerm: '',
       artists: [],
       error: false,
     };
   },
-  getArtists: function () {
-    const self = this;
+  getArtists() {
     fetch(API_BASE + encodeURI(this.state.searchTerm) + API_PARAMS, {
       method: 'GET',
       headers: {
         'Accept': 'application/json',
       },
-    }).then(function(response){
+    }).then((response) => {
       if (response.status === 200) return response.json();
       let error = new Error(response.statusText);
       error.response = response;
       throw error;
-    }).then(function(data){
-      self.setState({ artists: data.artists });
-    }).catch(function(error){
+    }).then((data) => {
+      this.setState({ 
+        artists: data.artists,
+        error: false,
+      });
+    }).catch((error) => {
       console.log(error);
-      self.setState({ error : true });
+      this.setState({ error : true });
     });
   },
-  onSearchInput: function (e) {
+  onSearchInput(e) {
     this.setState({
       searchTerm: e.target.value,
     });
   },
-  onSearchSubmit: function (e) {
+  onSearchSubmit(e) {
     e.preventDefault();
     this.getArtists();
   },
-  render: function () {
+  render() {
     return (
       <div className="wrapper">
         <Header />
@@ -55,7 +58,11 @@ const App = React.createClass({
           handleInput={this.onSearchInput}
           handleSubmit={this.onSearchSubmit} 
         />
-        <ArtistList artists={this.state.artists} />
+        {
+          this.state.error 
+            ? <Error />
+            : <ArtistList artists={this.state.artists} />
+        }
       </div>
     );
   }
