@@ -8,6 +8,4 @@ import 'whatwg-fetch'; // fetch polyfill for AJAX
 
 import App from './App';
 
-
-
 ReactDOM.render(<App />, document.getElementById("app"));

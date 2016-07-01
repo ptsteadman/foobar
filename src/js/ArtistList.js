@@ -12,7 +12,7 @@ function ArtistList(props) {
 }
 
 ArtistList.propTypes = {
-
+  artists: React.PropTypes.array.isRequired,
 };
 
 export default ArtistList;
