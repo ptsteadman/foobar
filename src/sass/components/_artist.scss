@@ -1,26 +1,31 @@
 // components/_artist.scss
 
 .artist {
-  height: 450px;
-  margin:0 $base-spacing 0 0;
+  height: 500px;
+  padding: 0 0 $base-spacing * 2 0;
+  margin-bottom: $base-spacing * 2;
 
   .artist__inner {
-    padding: $base-spacing;
-    background-color: $light-grey;
     height: 100%;
-  }
-
-  img.artist__image {
+    background-color: $teal-light;
     max-width: 250px;
   }
 
-  .artist__name {
-    color: $teal-light;
-    padding: 0 0 $base-spacing 0;
+  img.artist__image {
+    max-width: 100%;
+    display: block;
+    margin: 0px auto;
+  }
+
+  h4.artist__name{
+    color: $white;
+    font-weight: 500;
+    padding: $base-spacing $base-spacing 0;
   }
 
   .artist__description {
-
+    padding: $base-spacing $base-spacing 0;
+    color: $light-grey;
   }
 
 }

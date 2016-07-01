@@ -4,7 +4,7 @@ import Artist from './Artist';
 function ArtistList(props) {
   return (
     <section className="artist-list">
-      <div className="container">
+      <div className="col-md-8 col-sm-12 col-md-offset-2">
       {
         props.artists.map(function(a, i) {
           if(i < 6) {

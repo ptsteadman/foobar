@@ -5,7 +5,7 @@ section.search-form {
   padding: $base-spacing * 4 0;
 
   .search-form__input {
-    width: 85%;
+    width: 80%;
     height: 58px;
     font-size: 24px;
     font-weight: 500;
@@ -22,8 +22,8 @@ section.search-form {
     cursor:pointer;
     display: inline-block;
     float: right;
+    font-weight: 500;
     font-size: 24px;
-    text-transform: uppercase;
     color: $white;
     border-width: none;
     border-style: none;
