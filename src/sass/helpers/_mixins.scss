@@ -1,0 +1,14 @@
+// responsive media queries
+
+@mixin mobile {
+  @media (min-width: 0) and (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$mobile-width + 1}) and (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
