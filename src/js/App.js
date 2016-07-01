@@ -42,7 +42,8 @@ const App = React.createClass({
       searchTerm: e.target.value,
     });
   },
-  onSearchSubmit: function () {
+  onSearchSubmit: function (e) {
+    e.preventDefault();
     this.getArtists();
   },
   render: function () {
