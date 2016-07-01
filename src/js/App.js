@@ -44,18 +44,13 @@ const App = React.createClass({
   },
   render: function () {
     return (
-<<<<<<< HEAD
       <div className="wrapper">
         <Header />
-        <ArtistList />
-=======
-      <div className="container">
-        <h1>iHeartRadio App</h1>
         <SearchForm
           handleInput={this.onSearchInput}
           handleSubmit={this.onSearchSubmit} 
         />
->>>>>>> 1ceb815fe23c3a3d78024546687269829708f271
+        <ArtistList />
       </div>
     );
   }
