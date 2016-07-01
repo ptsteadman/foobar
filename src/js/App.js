@@ -19,15 +19,15 @@ const App = React.createClass({
     };
   },
   getArtists: function () {
-    let self = this;
-    fetch(API_BASE + this.state.searchTerm + API_PARAMS , {
+    const self = this;
+    fetch(API_BASE + encodeURI(this.state.searchTerm) + API_PARAMS, {
       method: 'GET',
       headers: {
         'Accept': 'application/json',
       },
     }).then(function(response){
       if (response.status === 200) return response.json();
-      var error = new Error(response.statusText);
+      let error = new Error(response.statusText);
       error.response = response;
       throw error;
     }).then(function(data){

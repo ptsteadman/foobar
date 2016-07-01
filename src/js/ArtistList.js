@@ -5,7 +5,13 @@ function ArtistList(props) {
   return (
     <section className="artist-list">
       <div className="container">
-        <Artist />
+      {
+        props.artists.map(function(a, i) {
+          if(i < 6) {
+            return <Artist name={a.artistName} id={a.artistId} />;
+          }
+        })
+      }
       </div>  
     </section>
   );

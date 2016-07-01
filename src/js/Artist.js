@@ -5,7 +5,7 @@ function Artist(props) {
     <div className="artist">
       <div className="container">
         <img src="" className="artist__image" />
-        <h3 className="artist__name">Artist Name</h3>
+        <h3 className="artist__name">{props.name}</h3>
         <p className="artist__description">Artist description</p>
       </div>
     </div> 
@@ -13,7 +13,8 @@ function Artist(props) {
 }
 
 Artist.propTypes = {
-
+  id: React.PropTypes.number.isRequired,
+  name: React.PropTypes.string.isRequired,
 };
 
 export default Artist;
