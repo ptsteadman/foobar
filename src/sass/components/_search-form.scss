@@ -2,26 +2,28 @@
 
 section.search-form {
   background-color: none;
-  padding: $base-spacing * 2 0;
+  padding: $base-spacing * 4 0;
 
   .search-form__input {
-    width: 100%;
-    height: $base-spacing * 3;
-    font-size: 26px;
+    width: 80%;
+    height: 58px;
+    font-size: 24px;
     font-weight: 500;
     padding: $base-spacing-small;
-    color: $teal-light;
+    color: $teal-dark;
     border: none;
-    border-bottom: 3px dashed $teal-dark;
+    border: 3px solid $teal-dark;
     text-align: center;
   }
 
   .search-form__submit {
     padding: $base-spacing;
-    background-color:$teal-light; 
+    background-color:$teal-dark; 
     cursor:pointer;
-    font-size: 26px;
-    text-transform: uppercase;
+    display: inline-block;
+    float: right;
+    font-weight: 500;
+    font-size: 24px;
     color: $white;
     border-width: none;
     border-style: none;
