@@ -19,6 +19,7 @@ const App = React.createClass({
     };
   },
   getArtists: function () {
+    let self = this;
     fetch(API_BASE + this.state.searchTerm + API_PARAMS , {
       method: 'GET',
       headers: {
@@ -30,23 +31,26 @@ const App = React.createClass({
       error.response = response;
       throw error;
     }).then(function(data){
-      self.setState({ artist: data });
+      self.setState({ artists: data.artists });
     }).catch(function(error){
       console.log(error);
       self.setState({ error : true });
     });
   },
-  onSearchInput: function () {
-    console.log('input');
+  onSearchInput: function (e) {
+    this.setState({
+      searchTerm: e.target.value,
+    });
   },
   onSearchSubmit: function () {
-    console.log('searching');
+    this.getArtists();
   },
   render: function () {
     return (
       <div className="wrapper">
         <Header />
         <SearchForm
+          searchTerm={this.state.searchTerm}
           handleInput={this.onSearchInput}
           handleSubmit={this.onSearchSubmit} 
         />

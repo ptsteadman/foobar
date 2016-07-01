@@ -3,15 +3,25 @@ import React from 'react';
 function SearchForm(props) {
   return (
     <section className="search-form">
-      <div className="col-md-6 col-md-offset-3">
-        <input type="text" className="search-form__input"/>
-        <input type="submit" />
+      <div className="col-md-4 col-md-offset-4">
+        <input 
+          type="text" 
+          className="search-form__input"
+          value={props.searchTerm} 
+          onChange={props.handleInput}
+        />
+        <input 
+        type="submit" 
+        onClick={props.handleSubmit}
+        />
       </div>
     </section>
+
   );
 }
 
 SearchForm.propTypes = {
+  searchTerm: React.PropTypes.string.isRequired,
   handleInput: React.PropTypes.func.isRequired,
   handleSubmit: React.PropTypes.func.isRequired,
 };
