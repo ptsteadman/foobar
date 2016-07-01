@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchForm from './SearchForm';
+import ArtistList from './ArtistList';
 
 const css = require('!style!css!sass!../sass/styles.scss');
 
@@ -48,6 +49,7 @@ const App = React.createClass({
           handleInput={this.onSearchInput}
           handleSubmit={this.onSearchSubmit} 
         />
+        <ArtistList artists={this.state.artists} />
       </div>
     );
   }
