@@ -1,14 +1,22 @@
 // components/_artist.scss
 
 .artist {
+  height: 450px;
+  margin:0 $base-spacing 0 0;
+
+  .artist__inner {
+    padding: $base-spacing;
+    background-color: $light-grey;
+    height: 100%;
+  }
 
   img.artist__image {
-
+    max-width: 250px;
   }
 
   .artist__name {
     color: $teal-light;
-    padding: $base-spacing 0;
+    padding: 0 0 $base-spacing 0;
   }
 
   .artist__description {
