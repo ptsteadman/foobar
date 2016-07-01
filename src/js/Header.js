@@ -4,7 +4,7 @@ function Header(props) {
   return (
     <header className="header">
       <div className="container">
-        <h4>iHeartRadio App</h4>
+        <h4>iHeartRadio</h4>
       </div>
     </header> 
   );

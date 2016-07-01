@@ -8,7 +8,47 @@ section.search-form {
     width: 100%;
     height: $base-spacing * 3;
     font-size: 26px;
+    font-weight: 500;
     padding: $base-spacing-small;
-    color: $dark-grey;
+    color: $teal-light;
+    border: none;
+    border-bottom: 3px dashed $teal-dark;
+    text-align: center;
   }
+
+  .search-form__submit {
+    padding: $base-spacing;
+    background-color:$teal-light; 
+    cursor:pointer;
+    font-size: 26px;
+    text-transform: uppercase;
+    color: $white;
+    border-width: none;
+    border-style: none;
+    border-color: none; 
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+    outline: none;
+  }
+
+  ::-webkit-input-placeholder {
+    color: $teal-light;
+  }
+
+  :-moz-placeholder { /* Firefox 18- */
+    color: $teal-light;  
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+    color: $teal-light;  
+  }
+
+  :-ms-input-placeholder {  
+    color: $teal-light;  
+  }
+
 }

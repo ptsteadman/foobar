@@ -7,10 +7,13 @@ function SearchForm(props) {
         <input 
           type="text" 
           className="search-form__input"
+          placeholder="Enter Artist Name"
           value={props.searchTerm} 
           onChange={props.handleInput}
         />
         <input 
+        className="search-form__submit"
+        value="Go"
         type="submit" 
         onClick={props.handleSubmit}
         />
