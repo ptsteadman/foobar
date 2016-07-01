@@ -36,8 +36,10 @@ const App = React.createClass({
       self.setState({ error : true });
     });
   },
-  onSearchInput: function () {
-    console.log('input');
+  onSearchInput: function (e) {
+    this.setState({
+      searchTerm: e.target.value,
+    });
   },
   onSearchSubmit: function () {
     console.log('searching');

@@ -3,7 +3,11 @@ import React from 'react';
 function SearchForm(props) {
   return (
     <div>
-      <input value={props.searchTerm} type="text" />
+      <input 
+        value={props.searchTerm} 
+        onChange={props.handleInput}
+        type="text" 
+      />
       <input type="submit" />
     </div>
   );
