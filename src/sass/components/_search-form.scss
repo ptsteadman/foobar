@@ -1,1 +1,14 @@
 // components/_search-form.scss
+
+section.search-form {
+  background-color: none;
+  padding: $base-spacing * 2 0;
+
+  .search-form__input {
+    width: 100%;
+    height: $base-spacing * 3;
+    font-size: 26px;
+    padding: $base-spacing-small;
+    color: $dark-grey;
+  }
+}

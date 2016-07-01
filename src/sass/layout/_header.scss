@@ -2,5 +2,9 @@
 
 header.header {
   padding: $base-spacing 0;
-  background-color: $teal;
+  background-color: $teal-dark;
+
+  h4 {
+    color: $white;
+  }
 }

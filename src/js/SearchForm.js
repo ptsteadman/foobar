@@ -2,10 +2,12 @@ import React from 'react';
 
 function SearchForm(props) {
   return (
-    <div>
-      <input type="text" />
-      <input type="submit" />
-    </div>
+    <section className="search-form">
+      <div className="col-md-6 col-md-offset-3">
+        <input type="text" className="search-form__input"/>
+        <input type="submit" />
+      </div>
+    </section>
   );
 }
 
