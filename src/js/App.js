@@ -1,9 +1,14 @@
 import React from 'react';
 
+// css
+var css = require('!style!css!sass!../sass/styles.scss');
+
 const App = React.createClass({
   render() {
     return (
-      <h1>App</h1>
+      <div className="container">
+        <h1>iHeartRadio App</h1>
+      </div>
     );
   }
 });

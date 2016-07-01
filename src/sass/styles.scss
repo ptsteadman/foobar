@@ -1,22 +1,23 @@
 //styles.scss
 
 // vendor
-@import "bootstrap-grid.scss";
+@import "vendor/bootstrap-grid.scss";
 
 // base
-@import "reset.scss";
+@import "base/reset.scss";
 
 // helpers
-@import "variables.scss";
+@import "helpers/variables.scss";
 
 // layout
-@import "global.scss";
-@import "header.scss";
-@import "footer.scss";
+@import "layout/global.scss";
+@import "layout/header.scss";
+@import "layout/footer.scss";
 
 // components
-@import "song-entry.scss";
-@import "search-bar.scss";
+@import "components/artist-list.scss";
+@import "components/artist.scss";
+@import "components/search-form.scss";
 
 
 
