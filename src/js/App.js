@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import ArtistList from './ArtistList';
 import SearchForm from './SearchForm';
+import Error from './Error';
 
 const css = require('!style!css!sass!../sass/styles.scss');
 
@@ -30,7 +31,10 @@ const App = React.createClass({
       error.response = response;
       throw error;
     }).then((data) => {
-      this.setState({ artists: data.artists });
+      this.setState({ 
+        artists: data.artists,
+        error: false,
+      });
     }).catch((error) => {
       console.log(error);
       this.setState({ error : true });
@@ -54,7 +58,11 @@ const App = React.createClass({
           handleInput={this.onSearchInput}
           handleSubmit={this.onSearchSubmit} 
         />
-        <ArtistList artists={this.state.artists} />
+        {
+          this.state.error 
+            ? <Error />
+            : <ArtistList artists={this.state.artists} />
+        }
       </div>
     );
   }

@@ -20,7 +20,6 @@ function SearchForm(props) {
         </form>
       </div>
     </section>
-
   );
 }
 
