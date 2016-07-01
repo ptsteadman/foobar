@@ -25,7 +25,7 @@ module.exports = {
           exclude: /node_modules/,
           loader: 'babel',
           query: { 
-            presets: ['react'],
+            presets: ['react', 'es2015'],
           }, 
         },
         { test: /\.(ttf|otf|eot|svg|woff(2)?)$/,
