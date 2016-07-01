@@ -1,4 +1,6 @@
 import React from 'react';
+import SearchForm from './SearchForm';
+
 const css = require('!style!css!sass!../sass/styles.scss');
 
 const API_BASE = 'http://api-3283.iheart.com/api/v1/catalog/searchAll?keywords=';
@@ -32,10 +34,20 @@ const App = React.createClass({
       self.setState({ error : true });
     });
   },
+  onSearchInput: function () {
+    console.log('input');
+  },
+  onSearchSubmit: function () {
+    console.log('searching');
+  },
   render: function () {
     return (
       <div className="container">
         <h1>iHeartRadio App</h1>
+        <SearchForm
+          handleInput={this.onSearchInput}
+          handleSubmit={this.onSearchSubmit} 
+        />
       </div>
     );
   }
