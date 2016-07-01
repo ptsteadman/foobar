@@ -8,7 +8,10 @@ function SearchForm(props) {
         onChange={props.handleInput}
         type="text" 
       />
-      <input type="submit" />
+      <input 
+        type="submit" 
+        onClick={props.handleSubmit}
+      />
     </div>
   );
 }
