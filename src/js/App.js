@@ -1,4 +1,5 @@
 import React from 'react';
+const css = require('!style!css!sass!../sass/styles.scss');
 
 const API_BASE = 'http://api-3283.iheart.com/api/v1/catalog/searchAll?keywords=';
 const API_PARAMS = '&queryTrack=false&queryBundle=false&queryArtist=true&' +
@@ -33,7 +34,9 @@ const App = React.createClass({
   },
   render: function () {
     return (
-      <h1>App</h1>
+      <div className="container">
+        <h1>iHeartRadio App</h1>
+      </div>
     );
   }
 });
