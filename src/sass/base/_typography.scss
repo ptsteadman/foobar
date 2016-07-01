@@ -1,1 +1,15 @@
 // base/_typography.scss
+
+body {
+  color: $light-black;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: $base-font-family;  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+  font-family: $base-font-family; 
+  margin: 0;
+}

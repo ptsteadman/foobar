@@ -1,10 +1,13 @@
 import React from 'react';
+import Artist from './Artist';
 
 function ArtistList(props) {
   return (
-    <div className="artist-list">
-
-    </div>
+    <section className="artist-list">
+      <div className="container">
+        <Artist />
+      </div>  
+    </section>
   );
 }
 

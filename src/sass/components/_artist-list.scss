@@ -1,1 +1,8 @@
 // components/_artist-list.scss
+
+section.artist-list {
+
+  padding: $base-spacing * 4 0;
+  background-color: $light-grey;
+  min-height: 600px;
+}
