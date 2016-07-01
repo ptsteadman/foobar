@@ -1,5 +1,12 @@
 // responsive media queries
 
+// transitions
+
+@mixin basic-transition($element){
+  -webkit-transition: $element 0.4s;
+  transition: $element 0.4s;
+}
+
 @mixin mobile {
   @media (min-width: 0) and (max-width: #{$mobile-width}) {
     @content;
