@@ -2,7 +2,6 @@ import React from 'react';
 import Header from './Header';
 import ArtistList from './ArtistList';
 import SearchForm from './SearchForm';
-import ArtistList from './ArtistList';
 
 const css = require('!style!css!sass!../sass/styles.scss');
 

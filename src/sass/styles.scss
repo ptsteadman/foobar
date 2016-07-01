@@ -3,12 +3,12 @@
 // vendor
 @import "vendor/bootstrap-grid.scss";
 
+// helpers
+@import "helpers/variables.scss";
+
 // base
 @import "base/reset.scss";
 @import "base/typography.scss";
-
-// helpers
-@import "helpers/variables.scss";
 
 // layout
 @import "layout/global.scss";
